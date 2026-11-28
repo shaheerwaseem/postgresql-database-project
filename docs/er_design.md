@@ -140,6 +140,36 @@ The specialization is total and disjoint. Every staff member belongs to exactly 
 
 
 
+### Additional Design Constraints
+
+#### Performance and Booking
+
+- Relationship: Receives
+- Cardinality: 1:N
+- Performance participation: Partial
+- Booking participation: Total
+
+Each booking belongs to exactly one performance.
+A performance can exist without any bookings.
+
+#### Additional Business Constraints
+
+- All tickets in a booking must belong to the same performance.
+- The assigned seat must belong to the venue hosting the performance.
+- The ticket type must be offered by the selected performance.
+- A check-in must be recorded by a staff member assigned to that performance.
+- Each venue must have a venue manager.
+- Each performance must offer at least one ticket type.
+- Each event must belong to one event category.
+- Cancelled tickets do not prevent seats from being booked again.
+- A booking cannot be cancelled after a ticket has been checked in.
+
+### ER Diagram
+
+The editable ER diagram is available in ER_Diagram_v1.drawio.
+
+![ER Diagram v1](ER_Diagram_v1.png)
+
 
 
 
