@@ -1,6 +1,6 @@
 Scenario: S4 — Event Ticketing
 
-Scenario: S4 — Event Ticketing
+
 
 # CMPE 351 — PostgreSQL Database Project
 
