@@ -309,3 +309,26 @@ dependency-preserving under the stated assumptions.
 
 SQL verification is used to confirm reconstruction of the
 sample data.
+
+
+
+## 15. Actual Verification Results
+
+The verification script was executed successfully
+using PostgreSQL 18 and pgAdmin 4 on November 28, 2026.
+
+| Test | Result |
+|---|---|
+| Original row count | 5 |
+| Reconstructed row count | 5 |
+| Original minus reconstructed | 0 rows |
+| Reconstructed minus original | 0 rows |
+| Overall verification | PASS |
+
+Both EXCEPT ALL comparisons were empty, confirming
+that the normalized relations reconstructed the
+original sample without missing or additional rows.
+
+The SQL script uses temporary tables and a rollback
+to avoid modifying the permanent project database.
+
